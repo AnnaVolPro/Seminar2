@@ -123,8 +123,65 @@ int c =20;
 
                             Console.Write("Введите второе число: ");
                             int num2 = Convert.ToInt32(Console.ReadLine());
-                            
+
+                            if(num1 % num2 ==0) 
+                            {
+                                Console.Write($"Число {num2} является кратным {num1}");
+                            }
+                            else
+                            {
+                                Console.Write($"Остаток от деления: {num1 % num2}");
+                            }
                         }
+
+                        void Zadacha14()
+                        {
+                            // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
+                            Console.Write("Введите первое число: ");
+                            int num1 = Convert.ToInt32(Console.ReadLine());
+
+                            if (num1 % 7== 0 && num1 % 23 ==0) //if(num1 % (7*23) ==0)
+                            {
+                                Console.Write($"Число {num1} является кратным 7 и 23");
+                            }
+                            else 
+                            {
+                                Console.Write("Число не кратно ни 7, ни 23");
+                            }
+                        }
+
+                        int Input()  // Функция ввода чисел
+                        {
+                            Console.Write("Введите  число: ");   
+                            return Convert.ToInt32(Console.ReadLine());
+                        }
+
+                        void Zadacha16()
+                        {
+                            // Напишите программу, которая принимает на вход два числа 
+                            // и проверяет, является ли одно число квадратом другого.
+
+                            
+                            int num1 = Input();
+                            int num2 = Input();
+
+                            if(num1==num2*num2 || num2==num1*num1)  // || - или 
+                            { // num1==Math.Pow(num2, 2)-функция возведения числа в степень, где 2 это степень
+                                Console.Write("Да");
+                            }
+                            else
+                            {
+                                Console.Write("Нет");
+                            }
+
+                        }
+
+                        
+                
+
+
+
+                
                         
 
 
@@ -135,5 +192,7 @@ int c =20;
 // Zadacha6();
 // Zadacha8();
 // Zadacha9();
-Zadacha11();
-
+// Zadacha11();
+// Zadacha13();
+// Zadacha14();
+// Zadacha16();
